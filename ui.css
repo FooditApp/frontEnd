@@ -1,4 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600&display=swap');
+:root{
+    --fooderGrey:#E6E7E8;
+    --fooderGreen:#183A1D;
+
+}
 body{
+    background-color: var(--fooderGrey);
     padding: 0;
     margin: 0;
+    min-height: 100vh;
+    font-family: 'Titillium Web', sans-serif;
+    display: flex;
+    justify-content: space-around;
+}
+.container{
+    position: absolute;
+    z-index: 0;
+    width: 375px;
+    min-height: 100vh;
+    height: 100%;
+    background-color: white;
+}
+.element100{
+    width: 100%;
+    height: fit-content;
+    box-sizing: border-box;
+    padding: 10px 20px;
+
+}
+.element100 p{
+    margin: 0;
+}
+.inputText100Container{
+    width: 100%;
+    height: 40px;
+    border-color: var(--fooderGreen);
+    border-radius: 10px;
+    box-sizing: border-box;
+    border-style: solid ;
+    border-width: 1px;
+    background: #183a1d38;
+}
+.inputText100{
+    width: 100%;
+    height: 100%;
+    border: none;
+    box-sizing: border-box;
+    background: none;
+}
+.inputText100:focus{
+    outline: none;
+}
+.feedContainer{
+    width: 150px;
+    height:150px;
+    min-width: 150px;
+    min-height:150px;
+    background-color: var(--fooderGreen); 
+    border-radius: 10px;
+    margin-right: 37px;
+}
+@media only screen and (max-width: 600px) and (min-height:800px) {
+    .container{
+        width: 100%;
+    }
 }
