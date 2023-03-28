@@ -2,7 +2,8 @@
 :root{
     --fooderGrey:#E6E7E8;
     --fooderGreen:#183A1D;
-
+    --fooderOren:#FC7300;
+    --fooderLightGreen:#E1EEDD;
 }
 body{
     background-color: var(--fooderGrey);
@@ -12,6 +13,7 @@ body{
     font-family: 'Titillium Web', sans-serif;
     display: flex;
     justify-content: space-around;
+    line-height: 1;
 }
 .container{
     position: absolute;
@@ -39,7 +41,7 @@ body{
     box-sizing: border-box;
     border-style: solid ;
     border-width: 1px;
-    background: #183a1d38;
+    background: var(--fooderLightGreen);
 }
 .inputText100{
     width: 100%;
@@ -58,10 +60,37 @@ body{
     min-height:150px;
     background-color: var(--fooderGreen); 
     border-radius: 10px;
-    margin-right: 37px;
+    margin-right: 35px;
 }
-@media only screen and (max-width: 600px) and (min-height:800px) {
-    .container{
-        width: 100%;
-    }
+.selectMerchant{
+    cursor: pointer;
+    width: auto;
+    white-space: nowrap;
+    height:30px;
+    background-color: var(--fooderLightGreen); 
+    border-radius: 7.5px;
+    margin-right: 10px;
+    box-sizing: border-box;
+    padding: 5px;
+}
+#bannerSroll2::-webkit-scrollbar{
+    display: none !important;
+}
+#bannerSroll2:active{
+    cursor: grabbing;
+    transform: scale(1);
+}
+.product100{
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    border: solid 1px var(--fooderGreen);
+    border-radius: 10px;
+}
+.productDesc{
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-around;
+    font-size: 20px;
+    padding: 10px;
 }
