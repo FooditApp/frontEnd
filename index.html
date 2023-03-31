@@ -4,114 +4,155 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="ui.css">
+    <script src="ui.js"></script>
+    <script src="userAgent.js"></script>
     <title>Fooder</title>
+    <link rel="shortcut icon" href="/asset/image/icon.svg" type="image/x-icon">
 </head>
 <body>
-    <section class="container" id="main" style="display: none;">
-        <div style="height: 20px;"></div>
-        <section class="element100">
-            <p style="font-size: 32pt;">Hai, Kamu sekarang di <b style="word-break: keep-all; white-space: nowrap;">Food Court</b></p>
-        </section>
-        <section class="element100">
-            <section class="element100" style="background-color:  var(--fooderOren); border-radius: 10px; color: white; height: 40px;">
-                <p>Meja <b>123</b></p>
+    <section class="main" id="container">
+    </section>
+    
+    <template id="main" id="containerWithScroll">
+            <div style="height: 20px;"></div>
+            <section class="element100" style="">
+                <p style="font-size: 32pt;">Hai, Kamu sekarang di </p>
             </section>
-        </section>
-        <section class="element100">
-            <section class="inputText100Container element100" style="display: flex;">
-                <input type="text" name="" id="" placeholder="Cari yang kamu suka" class="inputText100">
-                <img src="/asset/image/search.svg" alt="" >
+            <section class="element100" style=" background-color: white; z-index: 1; position: sticky;top: 0; ">
+                <p style="font-size: 32pt; word-break: keep-all; white-space: nowrap; font-weight: 600;">Food Court</p>
             </section>
-        </section>
-        <section class="element100" style="">
-            <section style="width: 100%; height: auto;display: flex; overflow: hidden; position: relative;scroll-behavior: smooth; justify-content: space-between;" id="bannerSroll1">
-                <section class="feedContainer" style=""></section>
-                <section class="feedContainer" style=""></section>
-                <section class="feedContainer" style="" id="scrollTest"></section>
-                <section class="feedContainer" style="" ></section>
+            <section class="element100" style="position: sticky;top: 52.67px;background-color: white; z-index: 1;">
+                <section class="element100" style="display:flex; justify-content: space-between; background-color:  var(--fooderOren); border-radius: 10px; color: white; height: 40px; ">
+                    <p>Meja Saat Ini </p>
+                    <b>123</b>
+                </section>
             </section>
-        </section>
-        <section class="element100" style="display: flex;">
-            <img src="/asset/image/system.svg" alt="">
-            <section style="width: 100%; height: auto;display: flex; overflow-x:scroll; position: relative;scroll-behavior: smooth;user-select: none;" id="bannerSroll2">
-                <section class="selectMerchant" style="">Ayam Bakar Rebus</section>
-                <section class="selectMerchant" style="">Mi Rebus Goreng</section>
-                <section class="selectMerchant" style="" id="scrollTest">Apa Aja</section>
-                <section class="selectMerchant" style="" >Wahh Uenak</section>
-                <section class="selectMerchant" style="" >Masaksih?</section>
+        
+            <section class="element100" style="">
+                <section style="width: 100%; height: auto;display: flex; overflow: hidden; position: relative;scroll-behavior: smooth; justify-content: space-between;" id="bannerSroll1">
+                    <section class="feedContainer" style=""></section>
+                    <section class="feedContainer" style=""></section>
+                    <section class="feedContainer" style="" id="scrollTest"></section>
+                    <section class="feedContainer" style="" ></section>
+                </section>
             </section>
-        </section>
-        <section class="element100" style="font-size: 24px; color: var(--fooderGreen);font-weight: 600;">
-            <p>Brand 1</p>
-        </section>
-        <section class="element100">
-            <section  class="product100">
-                <section style="display: flex;">
-                    <img src="/asset/image/image-files.svg" alt="">
-                    <section class="productDesc">
-                        <p><b>Bakso</b></p>
-                        <section>
-                            <img src="/asset/image/star.svg" alt="" srcset="">
-                            <img src="/asset/image/star.svg" alt="" srcset="">
-                            <img src="/asset/image/star.svg" alt="" srcset="">
-                            <img src="/asset/image/star.svg" alt="" srcset="">
-                            <img src="/asset/image/star.svg" alt="" srcset="">
+            <section class="element100" style="display: flex; position: sticky; top: 112.67px; background-color: white;">
+                <img src="/asset/image/system.svg" alt="" onclick="document.getElementById('floatMenuContainer').className = 'floatMenuContainer';">
+                <section class="foldedMenu" id="bannerSroll2">
+                </section>
+                <img src="/asset/image/search.svg" alt="">
+            </section>
+            <section id="productContainer"> 
+                <section>
+                    <section class="element100" style="font-size: 24px; color: var(--fooderGreen);font-weight: 600;">
+                        <p>Brand 1</p>
+                    </section>
+                    <section class="element100">
+                        <section  class="product100">
+                            <section style="display: flex;">
+                                <img src="/asset/image/image-files.svg" alt="">
+                                <section class="productDesc">
+                                    <p><b>Bakso</b></p>
+                                    <section>
+                                        <img src="/asset/image/star.svg" alt="" srcset="">
+                                        <img src="/asset/image/star.svg" alt="" srcset="">
+                                        <img src="/asset/image/star.svg" alt="" srcset="">
+                                        <img src="/asset/image/star.svg" alt="" srcset="">
+                                        <img src="/asset/image/star.svg" alt="" srcset="">
+                                    </section>
+                                    <p><b>Test</b></p>
+                                </section>
+                            </section>
+                            <img src="/asset/image/add-one.svg" alt="" style="width: 30px;height: 30px; padding: 10px; align-self: flex-end;">
                         </section>
-                        <p><b>Test</b></p>
+                    </section>
+                    <section class="element100">
+                        <section  class="product100">
+                            <section style="display: flex;">
+                                <img src="/asset/image/image-files.svg" alt="">
+                                <section class="productDesc">
+                                    <p><b>Bakso</b></p>
+                                    <section>
+                                        <img src="/asset/image/star.svg" alt="" srcset="">
+                                        <img src="/asset/image/star.svg" alt="" srcset="">
+                                        <img src="/asset/image/star.svg" alt="" srcset="">
+                                        <img src="/asset/image/star.svg" alt="" srcset="">
+                                        <img src="/asset/image/star.svg" alt="" srcset="">
+                                    </section>
+                                    <p><b>Test</b></p>
+                                </section>
+                            </section>
+                            <img src="/asset/image/add-one.svg" alt="" style="width: 30px;height: 30px; padding: 10px; align-self: flex-end;">
+                        </section>
                     </section>
                 </section>
-                <img src="/asset/image/add-one.svg" alt="" style="width: 30px;height: 30px; padding: 10px; align-self: flex-end;">
             </section>
-        </section>
-        <section class="element100">
-            <section  class="product100">
-                <section style="display: flex;">
-                    <img src="/asset/image/image-files.svg" alt="">
-                    <section class="productDesc">
-                        <p><b>Bakso</b></p>
-                        <section>
-                            <img src="/asset/image/star.svg" alt="" srcset="">
-                            <img src="/asset/image/star.svg" alt="" srcset="">
-                            <img src="/asset/image/star.svg" alt="" srcset="">
-                            <img src="/asset/image/star.svg" alt="" srcset="">
-                            <img src="/asset/image/star.svg" alt="" srcset="">
-                        </section>
-                        <p><b>Test</b></p>
+            
+            <section class="floatMenuContainerHidden" id="floatMenuContainer" style="width: inherit;" >
+                <section class="floatMenu" id="floatMenu">
+                    <section class="element100" style="display: flex;border-bottom:solid 1px black; justify-content: space-between;">
+                        <p style="font-weight: bold; ">Toko</p>
+                        <p onclick="document.getElementById('floatMenuContainer').className = 'floatMenuContainerHidden';">X</p>
                     </section>
+                    <p class="element100 floatMenuMerchant" style="font-weight: bold;">Toko</p>
                 </section>
-                <img src="/asset/image/add-one.svg" alt="" style="width: 30px;height: 30px; padding: 10px; align-self: flex-end;">
+            </section>
+        <script>
+            var container = document.getElementById('bannerSroll2');
+            var content = container.children;
+            var startX, startScroll, deltaX;
+    
+            container.addEventListener('mousedown', function(e) {
+                console.log("Woi");
+                startX = e.clientX;
+                startScroll = container.scrollTop;
+                deltaX = 0;
+                document.addEventListener('mousemove', onDrag);
+                document.addEventListener('mouseup', onDragEnd);
+            });
+    
+            function onDrag(e) {
+                deltaX = e.clientX - startX;
+                container.scroll(startScroll - deltaX,0);
+            }
+    
+            function onDragEnd() {
+                document.removeEventListener('mousemove', onDrag);
+                document.removeEventListener('mouseup', onDragEnd);
+            }
+        </script>
+    </template>
+    <template id="detail">
+        <img id="detailImage"  src="/asset/image/image-files.svg" alt="">
+        <section id="detailHeader" class="element100" style="font-size: 24px; font-weight: 600;">Nasi Campur Afuk — Nasi Campur Hainam        </section>
+        <section id="detailDesc"  class="element100" style="font-weight: 100;">Nasi hainam dengan topping siobak, chasio garing madu, babi kecap, sate babi, gohiong, dan telur.</section>
+        <section id="detailPrice" class="element100" style="font-size: 36px; font-weight: 600;">Rp. 5000</section>
+        <section class="element100" style="background-color: var(--fooderGrey);">Catatan</section>
+        <section class="element100">
+            <section class="inputText100Container" style="background-color: var(--fooderGrey);">
+                <input type="text" class="inputText100" style="margin: 0 5px;" placeholder="Catatan Untuk Penjual">
             </section>
         </section>
-    </section>
-    <section class="container" style="display: flex; justify-content: center;flex-direction: column;">
-        <section class="element100">
-            <p style="font-weight: 600; text-align: justify; font-size: 2rem;">404 : Oops Something went wrong</p>
-            <p></p>
+        <section class="element100" style="position: absolute;bottom: 0;background-color: var(--fooderLightGreen); display: flex; justify-content: space-between;">
+            <input type="number" id="quantity" name="quantity" min="1" max="5" style="border: none; background:var(--fooderLightGreen) ;" value="1">
+            <section style="padding: 10px; background-color: var(--fooderOren); color: white;border-radius: 10px;">Tambah Ke Keranjang</section>
         </section>
-    </section>
+        <section style="position: absolute; top: 10px; left: 10px; padding: 10px; background: white; border-radius: 10px;box-shadow: 10px;">
+            <p onclick="location.hash='main'">⬅</p>
+        </section>
+
+    </template>
+    <template id="error" style="display: flex;">
+        <section style="display: flex; flex-direction: column; justify-content: center; min-height: 100vh;">
+            <section class="element100">
+                <p style="font-weight: 600; text-align: justify; font-size: 2rem;">404 : <br> Oops Something went wrong</p>
+                <p></p>
+            </section>
+        </section>
+    </template>
     <script>
-        var container = document.getElementById('bannerSroll2');
-        var content = container.children;
-        var startX, startScroll, deltaX;
-
-        container.addEventListener('mousedown', function(e) {
-            console.log("Woi");
-            startX = e.clientX;
-            startScroll = container.scrollTop;
-            deltaX = 0;
-            document.addEventListener('mousemove', onDrag);
-            document.addEventListener('mouseup', onDragEnd);
-        });
-
-        function onDrag(e) {
-            deltaX = e.clientX - startX;
-            container.scroll(startScroll - deltaX,0);
-        }
-
-        function onDragEnd() {
-            document.removeEventListener('mousemove', onDrag);
-            document.removeEventListener('mouseup', onDragEnd);
-        }
+        var miniAgent = new userAgent;
+        var test = "test";
     </script>
 </body>
 </html>
